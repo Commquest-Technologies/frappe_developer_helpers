@@ -23,6 +23,8 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
+app_include_css = "/assets/frappe_developer_helpers/css/frappe_developer_helpers.css"
+app_include_js = "/assets/frappe_developer_helpers/js/frappe_developer_helpers.js"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/frappe_developer_helpers/css/frappe_developer_helpers.css"
@@ -41,6 +43,7 @@ app_license = "mit"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
+page_js = {"page" : "public/js/frappe_developer_helpers.js"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}

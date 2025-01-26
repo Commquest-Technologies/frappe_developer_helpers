@@ -1,0 +1,54 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+#custom-circle,
+#custom-pencil {
+    position: fixed;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#custom-circle {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+#custom-pencil {
+    bottom: 80px;
+    right: 26px;
+    width: 40px;
+    height: 40px;
+}
+
+#custom-circle:hover,
+#custom-pencil:hover {
+    transform: scale(1.1);
+    background-color: #0056b3; 
+}
+
+#custom-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: none;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
