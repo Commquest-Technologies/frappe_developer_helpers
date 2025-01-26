@@ -120,6 +120,18 @@ function showLoading(show) {
     }
 }
 
+// Custom throttle function to avoid Lodash dependency
+function throttle(fn, wait) {
+    let lastTime = 0;
+    return function(...args) {
+        const now = Date.now();
+        if (now - lastTime >= wait) {
+            lastTime = now;
+            fn.apply(this, args);
+        }
+    };
+}
+
 function componentLoader() {
     const page = frappe.get_route();
 
@@ -132,6 +144,6 @@ function componentLoader() {
     addEventListeners(circleDiv, pencilDiv, page[0], page);
 }
 
-const throttledComponentLoader = _.throttle(componentLoader, 200);
+const throttledComponentLoader = throttle(componentLoader, 200);
 frappe.router.on('change', throttledComponentLoader);
 componentLoader();
